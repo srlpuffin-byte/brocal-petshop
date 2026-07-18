@@ -33,4 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.4 });
     sections.forEach(s => observer.observe(s));
+
+    // ── Floating WhatsApp Popup toggle ──
+    const waBtn = document.getElementById('floating-wa-btn');
+    const waMenu = document.getElementById('wa-popup-menu');
+    
+    waBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        waMenu?.classList.toggle('active');
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!waMenu?.contains(e.target)) {
+            waMenu?.classList.remove('active');
+        }
+    });
 });
