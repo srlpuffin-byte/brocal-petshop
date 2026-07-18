@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Brocal Pet Shop</title>
+    <meta name="description" content="Catálogo completo de Brocal: indumentaria, alimentos balanceados y accesorios para mascotas en Córdoba.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .catalog-page { padding: 8rem 0 6rem; min-height: 80vh; }
+        .catalog-hero {
+            text-align: center; margin-bottom: 4rem;
+            padding: 5rem 0 3rem;
+            background: linear-gradient(140deg, var(--clr-bg) 0%, #FFF0E6 100%);
+        }
+        .catalog-tabs {
+            display: flex; justify-content: center; gap: 1rem;
+            margin-bottom: 3.5rem; flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 0.75rem 1.8rem; border-radius: var(--radius-full);
+            border: 2px solid var(--clr-border); background: #fff;
+            font-family: var(--font-main); font-weight: 700; font-size: 1rem;
+            cursor: pointer; transition: var(--transition); color: var(--clr-text-light);
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--clr-primary); color: #fff; border-color: var(--clr-primary);
+        }
+        .category-section { display: none; animation: fadeIn 0.45s ease; }
+        .category-section.active { display: block; }
+        @keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+        .product-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.8rem;
+        }
+        .product-card {
+            background: #fff; border-radius: var(--radius-md); overflow: hidden;
+            box-shadow: var(--shadow-sm); border: 1.5px solid var(--clr-border);
+            transition: var(--transition);
+        }
+        .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--clr-primary-light); }
+        .product-img { position: relative; overflow: hidden; aspect-ratio: 1/1; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .product-card:hover .product-img img { transform: scale(1.05); }
+        .product-tag {
+            position: absolute; top: 12px; left: 12px;
+            background: var(--clr-primary); color: #fff;
+            font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-full); font-family: var(--font-main);
+        }
+        .product-info { padding: 1.4rem; }
+        .product-info h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+        .product-info p { color: var(--clr-text-light); font-size: 0.95rem; margin-bottom: 1.2rem; }
+        .product-cta {
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            width: 100%; padding: 0.75rem; background: var(--clr-primary); color: #fff;
+            border-radius: var(--radius-sm); font-weight: 700; font-size: 0.95rem;
+            font-family: var(--font-main); transition: var(--transition); border: none; cursor: pointer;
+        }
+        .product-cta:hover { background: var(--clr-primary-dark); color: #fff; }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2.5rem;
+            color: var(--clr-text-light); font-weight: 600; font-size: 0.95rem;
+        }
+        .back-link:hover { color: var(--clr-primary); }
+        .empty-badge {
+            text-align: center; padding: 4rem; color: var(--clr-text-light);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/5493515188068?text=Hola%20Brocal!%20Vi%20su%20p%C3%A1gina%20y%20quiero%20consultar." class="floating-wa" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">¡Escribinos!</span>
+    </a>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Brocal Logo" class="logo-img">
+                <span class="logo-text">Brocal</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html" class="active">Catálogo</a>
+                <a href="index.html#banos">Baños</a>
+                <a href="index.html#sucursales">Sucursales</a>
+                <a href="https://wa.me/5493515188068" class="btn btn-primary nav-cta" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pedido
+                </a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="catalog-hero">
+            <div class="container">
+                <div class="section-tag">🐾 Tienda</div>
+                <h1 class="section-title">Catálogo <span class="highlight">Brocal</span></h1>
+                <p class="section-subtitle">Elegí lo mejor para tu mascota</p>
+            </div>
+        </div>
+
+        <section class="catalog-page">
+            <div class="container">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+
+                <!-- Category Tabs -->
+                <div class="catalog-tabs">
+                    <button class="tab-btn active" data-target="indumentaria">
+                        <i class="fas fa-tshirt"></i> Indumentaria
+                    </button>
+                    <button class="tab-btn" data-target="alimentos">
+                        <i class="fas fa-bone"></i> Alimentos
+                    </button>
+                    <button class="tab-btn" data-target="accesorios">
+                        <i class="fas fa-tag"></i> Accesorios
+                    </button>
+                </div>
+
+                <!-- Indumentaria -->
+                <div id="indumentaria" class="category-section active">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Camiseta Selección Argentina">
+                                <span class="product-tag">🔥 Popular</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Camiseta Selección Argentina</h3>
+                                <p>Talle 1 al 7. Tela de alta calidad.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20la%20Camiseta%20Selecci%C3%B3n%20Argentina" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Buzo polar">
+                                <span class="product-tag">Invierno</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Buzo Polar de Invierno</h3>
+                                <p>Calor y comodidad para los días fríos.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20el%20Buzo%20Polar" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Campera impermeable">
+                                <span class="product-tag">Nuevo</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Campera Impermeable</h3>
+                                <p>Perfecta para días de lluvia.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20la%20Campera%20Impermeable" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alimentos -->
+                <div id="alimentos" class="category-section">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Royal Canin">
+                                <span class="product-tag">🏆 Top venta</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Royal Canin Adultos</h3>
+                                <p>Bolsa 15kg. Nutrición completa y balanceada.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20Royal%20Canin%20Adultos" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1583337260546-28b6bf66d004?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pro Plan Cachorros">
+                                <span class="product-tag">Cachorros</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Pro Plan Cachorros</h3>
+                                <p>7.5kg. Fórmula para el crecimiento ideal.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20Pro%20Plan%20Cachorros" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alimento para gatos">
+                                <span class="product-tag">Gatos</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Alimento Premium para Gatos</h3>
+                                <p>Formulado para todas las razas y edades.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20alimento%20premium%20para%20gatos" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accesorios -->
+                <div id="accesorios" class="category-section">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Collar con placa">
+                                <span class="product-tag">Nuevo</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Collar con Placa Identificatoria</h3>
+                                <p>Varios colores y tamaños disponibles.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20el%20Collar%20con%20placa" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1527526029430-319bc4c5c085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Juguete interactivo">
+                                <span class="product-tag">🔥 Popular</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Juguete Interactivo</h3>
+                                <p>Para perros y gatos. Resistente y divertido.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20el%20Juguete%20Interactivo" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://images.unsplash.com/photo-1520087619250-584369e45e35?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Camita ortopédica">
+                            </div>
+                            <div class="product-info">
+                                <h3>Camita Ortopédica</h3>
+                                <p>Descanso premium para tu mascota.</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Quiero%20consultar%20por%20la%20Camita%20Ortop%C3%A9dica" target="_blank" class="product-cta"><i class="fab fa-whatsapp"></i> Consultar precio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content" style="grid-template-columns: 1fr 1fr;">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="Brocal Logo" class="logo-img logo-img--footer">
+                    <span class="logo-text logo-text--footer">Brocal</span>
+                </a>
+                <p>Mascotas felices, sanas y fuertes.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/brocal_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5493515188068" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <a href="https://wa.me/5493515188068" target="_blank"><i class="fab fa-whatsapp"></i> +54 9 351 518-8068</a>
+                <a href="https://instagram.com/brocal_" target="_blank"><i class="fab fa-instagram"></i> @brocal_</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Brocal Pet Shop · Córdoba, Argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Tab switching logic
+        const tabs = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.category-section');
+
+        function activateTab(target) {
+            tabs.forEach(t => t.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            document.querySelector(`.tab-btn[data-target="${target}"]`)?.classList.add('active');
+            document.getElementById(target)?.classList.add('active');
+        }
+
+        tabs.forEach(btn => {
+            btn.addEventListener('click', () => activateTab(btn.dataset.target));
+        });
+
+        // Activate based on URL hash (e.g. catalogo.html#alimentos)
+        const hash = window.location.hash?.substring(1);
+        if (hash && document.getElementById(hash)) activateTab(hash);
+    </script>
+</body>
+</html>

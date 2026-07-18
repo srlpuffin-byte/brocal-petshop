@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brocal | Mascotas felices, sanas y fuertes 🐾</title>
+    <meta name="description" content="Brocal Pet Shop en Córdoba: Alimentos balanceados premium, accesorios para mascotas y servicio de baño profesional. 3 sucursales.">
+    <meta name="keywords" content="pet shop cordoba, alimentos balanceados, accesorios mascotas, baños perros, brocal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5493515188068?text=Hola%20Brocal!%20Vi%20su%20p%C3%A1gina%20y%20quiero%20consultar." class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">¡Escribinos!</span>
+    </a>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Brocal Logo" class="logo-img">
+                <span class="logo-text">Brocal</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="catalogo.html">Catálogo</a>
+                <a href="#banos">Baños</a>
+                <a href="#sucursales">Sucursales</a>
+                <a href="#galeria">Comunidad</a>
+                <a href="#sucursales" class="btn btn-primary nav-cta">
+                    Encontranos
+                </a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <div class="hero-badge"><i class="fas fa-paw"></i> Pet Shop en Córdoba</div>
+                    <h1>Mascotas <span class="highlight">felices,</span><br>sanas y fuertes 🐾</h1>
+                    <p>El mejor alimento balanceado, accesorios divertidos y servicio de baño profesional. <strong>3 sucursales</strong> en Córdoba para estar siempre cerca de vos.</p>
+                    <div class="hero-ctas">
+                        <a href="catalogo.html" class="btn btn-primary btn-large">
+                            Ver catálogo <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#sucursales" class="btn btn-ghost btn-large">
+                            Nuestras sucursales
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Perro feliz en Brocal" class="hero-image">
+                    <div class="glass-badge">
+                        <i class="fas fa-heart"></i> +500 clientes felices
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><strong>3</strong><span>Sucursales</span></div>
+                        <div class="stat-divider"></div>
+                        <div class="stat"><strong>5★</strong><span>Calidad</span></div>
+                        <div class="stat-divider"></div>
+                        <div class="stat"><strong>100%</strong><span>Amor 🐾</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                    <path d="M0,60 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="#ffffff"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Services Strip -->
+        <section class="services-strip">
+            <div class="container">
+                <div class="strip-grid">
+                    <a href="catalogo.html#alimentos" class="strip-card">
+                        <div class="strip-icon"><i class="fas fa-bone"></i></div>
+                        <div><h3>Alimentos</h3><p>Marcas premium</p></div>
+                        <i class="fas fa-chevron-right strip-arrow"></i>
+                    </a>
+                    <a href="catalogo.html#accesorios" class="strip-card">
+                        <div class="strip-icon"><i class="fas fa-tag"></i></div>
+                        <div><h3>Accesorios</h3><p>Collares, juguetes y más</p></div>
+                        <i class="fas fa-chevron-right strip-arrow"></i>
+                    </a>
+                    <a href="#banos" class="strip-card">
+                        <div class="strip-icon"><i class="fas fa-bath"></i></div>
+                        <div><h3>Baños</h3><p>Servicio profesional</p></div>
+                        <i class="fas fa-chevron-right strip-arrow"></i>
+                    </a>
+                    <a href="#sucursales" class="strip-card">
+                        <div class="strip-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h3>Sucursales</h3><p>3 puntos en Córdoba</p></div>
+                        <i class="fas fa-chevron-right strip-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bath Service Section -->
+        <section id="banos" class="bath-service">
+            <div class="container bath-content">
+                <div class="bath-image" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Perro bañándose feliz en Brocal">
+                    <div class="bath-badge"><i class="fas fa-star"></i> Servicio de 1er nivel</div>
+                </div>
+                <div class="bath-text" data-aos="fade-left">
+                    <div class="section-tag">🛁 Servicio</div>
+                    <h2>Baños para perros<br>y gatos</h2>
+                    <p>Sabemos lo importante que es la higiene para la salud de tu mascota. Nuestro equipo la cuida con productos de primera calidad para que quede impecable y feliz.</p>
+                    <ul class="bath-features">
+                        <li><i class="fas fa-check-circle"></i> Shampoo hipoalergénico sin sulfatos</li>
+                        <li><i class="fas fa-check-circle"></i> Secado rápido y sin estrés</li>
+                        <li><i class="fas fa-check-circle"></i> Corte de uñas incluido</li>
+                        <li><i class="fas fa-check-circle"></i> Limpieza de oídos</li>
+                        <li><i class="fas fa-check-circle"></i> Perfumado con colonia especial</li>
+                    </ul>
+                    <a href="https://wa.me/5493515188068?text=Hola%20Brocal!%20Quiero%20reservar%20un%20turno%20de%20ba%C3%B1o." class="btn btn-primary btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Reservar turno
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery / Instagram Section -->
+        <section id="galeria" class="gallery">
+            <div class="container">
+                <div class="section-tag" style="text-align:center">📸 Comunidad</div>
+                <h2 class="section-title">Seguinos en <span class="highlight">Instagram</span></h2>
+                <p class="section-subtitle">Mirá las historias de nuestros clientes más peludos <span>@brocal_</span></p>
+                
+                <div class="gallery-grid">
+                    <a href="https://instagram.com/brocal_" target="_blank" class="ig-post ig-post--brand">
+                        <div class="ig-brand-card">
+                            <img src="logo.svg" alt="Brocal Mascota" class="ig-brand-logo">
+                            <span class="ig-brand-name">Brocal</span>
+                            <span class="ig-brand-tag">@brocal_</span>
+                        </div>
+                        <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="https://instagram.com/brocal_" target="_blank" class="ig-post">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Mascota cliente de Brocal">
+                        <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="https://instagram.com/brocal_" target="_blank" class="ig-post ig-post--large">
+                        <img src="https://images.unsplash.com/photo-1537151608804-ea6f23c360fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Mascota cliente de Brocal">
+                        <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="https://instagram.com/brocal_" target="_blank" class="ig-post">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Mascota cliente de Brocal">
+                        <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="https://instagram.com/brocal_" target="_blank" class="ig-post">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Mascota cliente de Brocal">
+                        <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                    </a>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="https://instagram.com/brocal_" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-instagram"></i> Ver más en Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locations & Hours -->
+        <section id="sucursales" class="locations">
+            <div class="container">
+                <div class="section-tag" style="text-align:center">📍 Donde estamos</div>
+                <h2 class="section-title">Nuestras sucursales</h2>
+                <p class="section-subtitle">Tres puntos en Córdoba, siempre cerca de vos</p>
+                
+                <div class="locations-content">
+                    <div class="locations-cards">
+                        <div class="branch-card">
+                            <div class="branch-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="branch-info">
+                                <h3>24 de Septiembre 859</h3>
+                                <p>Córdoba, Argentina</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Consulta%20sobre%20la%20sucursal%20de%2024%20de%20Septiembre" target="_blank" class="branch-cta">Consultar <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="branch-card">
+                            <div class="branch-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="branch-info">
+                                <h3>Altolaguirre 1786</h3>
+                                <p>Córdoba, Argentina</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Consulta%20sobre%20la%20sucursal%20de%20Altolaguirre" target="_blank" class="branch-cta">Consultar <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="branch-card">
+                            <div class="branch-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="branch-info">
+                                <h3>Donado 2527</h3>
+                                <p>Córdoba, Argentina</p>
+                                <a href="https://wa.me/5493515188068?text=Hola!%20Consulta%20sobre%20la%20sucursal%20de%20Donado" target="_blank" class="branch-cta">Consultar <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hours-card">
+                        <div class="hours-header">
+                            <i class="far fa-clock"></i>
+                            <h3>Horarios</h3>
+                        </div>
+                        <ul class="hours-list">
+                            <li>
+                                <span>Lunes a Viernes</span>
+                                <span>09:30 – 13:30<br>17:00 – 20:30</span>
+                            </li>
+                            <li>
+                                <span>Sábados</span>
+                                <span>09:30 – 14:00</span>
+                            </li>
+                            <li class="closed">
+                                <span>Domingos</span>
+                                <span>Cerrado</span>
+                            </li>
+                        </ul>
+                        <p class="hours-note">* Pueden variar en feriados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="Brocal Logo" class="logo-img logo-img--footer">
+                    <span class="logo-text logo-text--footer">Brocal</span>
+                </a>
+                <p>Mascotas felices, sanas y fuertes.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/brocal_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5493515188068" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="#banos">Baños</a>
+                <a href="#sucursales">Sucursales</a>
+                <a href="#galeria">Comunidad</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <a href="https://wa.me/5493515188068" target="_blank"><i class="fab fa-whatsapp"></i> +54 9 351 518-8068</a>
+                <a href="https://instagram.com/brocal_" target="_blank"><i class="fab fa-instagram"></i> @brocal_</a>
+                <a href="#sucursales"><i class="fas fa-map-marker-alt"></i> 3 sucursales en Córdoba</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Brocal Pet Shop · Córdoba, Argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
