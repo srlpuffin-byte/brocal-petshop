@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- BROCAL FAVICON — naranja sólido sin fondo -->
+  <circle cx="21" cy="33" r="23" fill="#F07820"/>
+  <circle cx="79" cy="33" r="23" fill="#F07820"/>
+  <rect x="28" y="25" width="44" height="70" rx="13" fill="#F07820"/>
+  <circle cx="41" cy="46" r="9"   fill="#FFFFFF"/>
+  <circle cx="41" cy="46" r="3"   fill="#F07820"/>
+  <circle cx="59" cy="46" r="9"   fill="#FFFFFF"/>
+  <circle cx="59" cy="46" r="3"   fill="#F07820"/>
+  <rect x="34" y="67" width="32" height="5.5" rx="2.5" fill="#FFFFFF"/>
+  <rect x="54" y="67" width="13" height="19" rx="6.5" fill="#FFFFFF"/>
+  <line x1="60.5" y1="69" x2="60.5" y2="84"
+        stroke="#F07820" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
