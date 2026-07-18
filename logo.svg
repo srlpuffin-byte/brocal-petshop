@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <!-- Left Ear: arch going up and left, then down -->
-  <path d="M 36,42 C 36,12 10,12 10,50" stroke="#E06A41" stroke-width="16" stroke-linecap="round" fill="none" />
+  <!-- Left Ear: arch going up and left, then down, very close to the head -->
+  <path d="M 36,42 C 36,12 18,12 18,52" stroke="#E06A41" stroke-width="16" stroke-linecap="round" fill="none" />
   
-  <!-- Right Ear: arch going up and right, then down -->
-  <path d="M 64,42 C 64,12 90,12 90,50" stroke="#E06A41" stroke-width="16" stroke-linecap="round" fill="none" />
+  <!-- Right Ear: arch going up and right, then down, very close to the head -->
+  <path d="M 64,42 C 64,12 82,12 82,52" stroke="#E06A41" stroke-width="16" stroke-linecap="round" fill="none" />
   
   <!-- Central Head -->
   <path d="M 32,95 L 32,45 A 18,18 0 0,1 68,45 L 68,95 Z" fill="#E06A41" />
